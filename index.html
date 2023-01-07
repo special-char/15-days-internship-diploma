@@ -14,7 +14,63 @@
     />
   </head>
   <body>
-    <div>
+    <form novalidate>
+      <div style="position: relative">
+        <label
+          for="name"
+          style="
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          "
+          >Name</label
+        >
+        <input
+          type="text"
+          id="name"
+          placeholder="Please enter name"
+          required
+          autocomplete="given-name"
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Please enter email"
+          autocomplete="email"
+        />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Please enter Password"
+          autocomplete="new-password"
+        />
+      </div>
+      <div>
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Please enter Confirm Password"
+          autocomplete="new-password"
+        />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 48 48"
@@ -47,7 +103,7 @@
         height="300px"
         width="300px"
       />
-    </picture>
+    </picture> -->
 
     <!-- <audio>
 
