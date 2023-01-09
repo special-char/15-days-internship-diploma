@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <form novalidate>
+    <form>
       <div style="position: relative">
         <label
           for="name"
@@ -65,6 +65,72 @@
           placeholder="Please enter Confirm Password"
           autocomplete="new-password"
         />
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="">Please Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="hobbies">Hobbies</label>
+        <select id="hobbies">
+          <option value="">Please Select Gender</option>
+          <optgroup label="Sports">
+            <option value="cricket">Cricket</option>
+            <option value="football">Football</option>
+            <option value="badminton">Badminton</option>
+          </optgroup>
+          <optgroup label="Activity">
+            <option value="dance">Dance</option>
+            <option value="singing">Singing</option>
+          </optgroup>
+        </select>
+      </div>
+      <fieldset>
+        <legend>Gender</legend>
+        <div>
+          <input type="radio" name="gender" id="male" checked />
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" name="gender" id="female" checked />
+          <label for="female">Female</label>
+        </div>
+        <div>
+          <input type="radio" name="gender" id="other" checked />
+          <label for="other">Other</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Hobbies</legend>
+        <div>
+          <input type="checkbox" name="hobbies" id="cricket" checked />
+          <label for="cricket">Cricket</label>
+        </div>
+        <div>
+          <input type="checkbox" name="hobbies" id="dance" checked />
+          <label for="dance">Dance</label>
+        </div>
+        <div>
+          <input type="checkbox" name="hobbies" id="singing" checked />
+          <label for="singing">Singing</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="college">College</label>
+        <input type="text" id="college" list="college-list" />
+
+        <datalist id="college-list">
+          <option value="Silver Oack"></option>
+          <option value="Nirma"></option>
+          <option value="LD"></option>
+        </datalist>
       </div>
 
       <button type="submit">Submit</button>
