@@ -5,14 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <style>
+      header > a {
+        color: black;
+      }
+
+      /* a {
+        color: green;
+      } */
+
+      h1 ~ h2 {
+        color: pink;
+      }
+
+      ul > li:nth-child(3n) > a {
+        color: gold;
+      }
+
+      /* li > a::before {
+        content: "...";
+      } */
+
+      /* ul > li:nth-child(even) > a {
+        color: dodgerblue;
+      } */
+
+      /* a:hover {
+        color: brown;
+      }
+
+      a:active {
+        color: green;
+      } */
+
+      /* p::first-line {
+        font-size: 24px;
+        color: red;
+      } */
+    </style>
   </head>
   <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut laudantium
-      praesentium obcaecati ducimus, delectus sequi! Quasi cum modi unde soluta.
-      Delectus officiis tempore saepe, provident sint reiciendis laboriosam quod
-      illum!
-    </p>
+    <header>
+      <a href="#">Logo</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <h1>I'm Yagnesh Modh</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Developer</h2>
+      </section>
+      <section id="about">
+        <h2>Years Experience as Devloper</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis,
+          labore rem? Excepturi ipsa eos explicabo qui quis dolorem consequatur
+          natus magnam assumenda sunt reprehenderit, enim obcaecati recusandae
+          laboriosam aut consequuntur?
+        </p>
+      </section>
+    </main>
   </body>
 </html>
