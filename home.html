@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    /> -->
     <!-- <link rel="stylesheet" href="./style.css" /> -->
     <style>
+      /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"); */
+
+      @font-face {
+        font-family: "latoReg";
+        src: url("./assets/fonts/lato-regular.woff2") format("woff2"),
+          url("./assets/fonts/lato-regular.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "latoBold";
+        src: url("./assets/fonts/lato-bold.woff2") format("woff2"),
+          url("./assets/fonts/lato-bold.woff") format("woff");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "latoLight";
+        src: url("./assets/fonts/lato-light.woff2") format("woff2"),
+          url("./assets/fonts/lato-light.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      :root {
+        --primary-color: #661fff;
+        --primary-text: #fff;
+      }
+
       header > a {
         color: black;
       }
@@ -67,14 +104,45 @@
       }
 
       .box {
-        background-color: red;
+        background-color: var(--primary-color);
         height: 100px;
         width: 100px;
         font-size: 2em;
+        border-width: 2px;
+        border-color: black;
+        border-style: solid;
+        padding: 10px 20px;
+        margin: 10px;
+      }
+
+      .btn {
+        background-color: var(--primary-color);
+        color: var(--primary-text);
+        border: 0;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "latoReg", sans-serif;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .btn.btn--success {
+        background-color: greenyellow;
       }
     </style>
   </head>
   <body>
+    <button class="btn">Submit</button>
+
+    <a href="#" class="btn btn--success">Submit</a>
+
+    <div class="btn">Submit</div>
+
     <div class="wrapper">
       <div class="box">Lorem ipsum dolor sit amet.</div>
     </div>
