@@ -44,9 +44,9 @@
         --primary-text: #fff;
       }
 
-      header > a {
+      /* header > a {
         color: black;
-      }
+      } */
 
       /* a {
         color: green;
@@ -56,9 +56,9 @@
         color: pink;
       }
 
-      ul > li:nth-child(3n) > a {
+      /* ul > li:nth-child(3n) > a {
         color: gold;
-      }
+      } */
 
       /* measurement UNITS */
 
@@ -94,7 +94,7 @@
       /* mm */
       /* pc */
 
-      body {
+      /* body {
         font-size: 12px;
       }
 
@@ -133,10 +133,124 @@
 
       .btn.btn--success {
         background-color: greenyellow;
+      } */
+      * {
+        margin: 0;
+        padding: 0;
       }
+
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+
+        /* flex-direction: row; */
+        /* when flex direction is row -> x axis */
+        /* when flex direction is column -> y axis */
+        /* justify-content: center; */
+
+        /* when flex direction is row -> y axis */
+        /* when flex direction is column -> x axis */
+        /* align-items: center; */
+
+        /* align content will work only when flex-wrap is wrap */
+        /* when flex direction is row -> y axis */
+        /* when flex direction is column -> x axis */
+        align-content: flex-start;
+        background-color: yellow;
+        height: 100vh;
+      }
+
+      .box {
+        height: 100px;
+        /* background-color: red; */
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        flex-shrink: 0;
+        flex-basis: 320px;
+        flex-grow: 1;
+        /* flex: 1; */
+      }
+
+      .box:nth-child(1) {
+        background-color: blue;
+        /* flex-grow: 3; */
+        order: 3;
+      }
+      .box:nth-child(2) {
+        background-color: red;
+        /* flex-grow: 2; */
+        order: 2;
+      }
+      .box:nth-child(3) {
+        background-color: green;
+        /* flex-grow: 1; */
+        order: 1;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 2rem;
+      }
+
+      nav > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+      }
+
+      /* nav > ul > li {
+        margin: 0 8px;
+      } */
+
+      /* nav > ul > li:first-child {
+        margin-left: 0;
+      }
+
+      nav > ul > li:last-child {
+        margin-right: 0;
+      } */
+
+      header a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* nav > ul > li > a {
+        text-decoration: none;
+      } */
     </style>
   </head>
   <body>
+    <header>
+      <a href="#">Logo</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#chat">Let's Chat</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <div class="wrapper">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div> -->
+
+    <!-- <h1>lorem</h1>
+    <h2>Hello</h2>
+
+    <span>hello</span>
+    <span>hello</span>
+
     <button class="btn">Submit</button>
 
     <a href="#" class="btn btn--success">Submit</a>
@@ -187,6 +301,6 @@
           laboriosam aut consequuntur?
         </p>
       </section>
-    </main>
+    </main> -->
   </body>
 </html>
