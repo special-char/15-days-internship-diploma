@@ -6,84 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
+      /* .wrapper {
         display: grid;
-        grid-template:
-          "header header" 64px
-          "aside main" 1fr
-          "- footer" auto / 150px 1fr;
-        /* grid-template-columns: 150px 1fr;
-        grid-template-rows: 64px 1fr auto; */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+
+      .box {
+        background-color: red;
+        height: 100px;
+      } */
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: repeat(2, 200px);
         gap: 1rem;
         height: 100vh;
       }
 
-      header {
-        background-color: coral;
-        grid-area: header;
-        /* grid-column: 1 / -1; */
-      }
-
-      aside {
-        background-color: gold;
-        grid-area: aside;
-      }
-
-      main {
-        background-color: violet;
-        grid-area: main;
-      }
-
-      footer {
-        background-color: dodgerblue;
-        grid-area: footer;
-        /* grid-column: 1 / -1; */
-      }
-
-      .wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 100px);
-        gap: 1rem;
-      }
-
-      /* .box {
+      .box {
         background-color: red;
+        height: 200px;
+        width: 200px;
+      }
+
+      @media screen and (max-width: 1240px) {
+        .box {
+          background-color: green;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .box {
+          background-color: coral;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        .box {
+          background-color: blue;
+        }
+      }
+
+      @media print {
+        .box {
+          background-color: violet;
+        }
+      }
+
+      /* .box:nth-child(2) {
+        grid-row: span 2;
       } */
-
-      .box:nth-child(1) {
-        background-color: coral;
-        grid-column: 1 / -1;
-        /* grid-row: span 3; */
-        /* grid-column: span 2; */
-        /* grid-column: 1 / 3; */
-      }
-
-      .box:nth-child(2) {
-        background-color: gold;
-        /* grid-row: 2 / 4;
-        grid-column: 1 / 2; */
-      }
-
-      .box:nth-child(3) {
-        background-color: violet;
-        /* grid-row: 3 / 4;
-        grid-column: 1 / 2; */
-      }
-
-      .box:nth-child(4) {
-        background-color: dodgerblue;
-      }
-
-      .box:nth-child(5) {
-        background-color: red;
-      }
     </style>
   </head>
   <body>
-    <header>Header</header>
+    <!-- <header>Header</header>
     <aside>side bar</aside>
     <main>main section</main>
-    <footer>footer component</footer>
+    <footer>footer component</footer> -->
+
+    <div class="wrapper">
+      <div class="box">Item 1</div>
+      <!-- <div class="box">Item 2</div>
+      <div class="box">Item 3</div> -->
+      <!-- <div class="box">Item 5</div>
+      <div class="box">Item 6</div>
+      <div class="box">Item 7</div>
+      <div class="box">Item 8</div>
+      <div class="box">Item 9</div>
+      <div class="box">Item 10</div>
+      <div class="box">Item 11</div>
+      <div class="box">Item 12</div>
+      <div class="box">Item 13</div>
+      <div class="box">Item 14</div>
+      <div class="box">Item 15</div> -->
+    </div>
   </body>
 </html>
